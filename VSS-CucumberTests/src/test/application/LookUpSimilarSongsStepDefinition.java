@@ -15,7 +15,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import test.application.*;
 
-public class LookUpSimilarSoungsStepDefinition {
+public class LookUpSimilarSongsStepDefinition {
     private static WebDriver driver = null;
 
     @Before
@@ -30,8 +30,9 @@ public class LookUpSimilarSoungsStepDefinition {
         driver.close();
     }
 
-    @Given("^Movie soundtracks were found$")
-    public void movie_soundtracks_were_found(){
+    @Given("^Movie soundtrack was found$")
+    public void movie_soundtrack_was_found(){
+       
        
         
     }
@@ -42,9 +43,7 @@ public class LookUpSimilarSoungsStepDefinition {
     }
 
     @Then("^User gets a list of similar songs$")
-    public List<String> user_gets_the_list_of_similar_songs(List<String> args1) throws Throwable {
-        List<String> similarSongs = new ArrayList<String>();
-        return similarSongs;
+    public void user_gets_the_list_of_similar_songs(List<String> args1) throws Throwable {
 
     }
 

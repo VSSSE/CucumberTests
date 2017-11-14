@@ -15,7 +15,7 @@ Scenario: Soundtracks were found in the database
 	Given    User is on the start page 
 	When     User enters a movie title 
 	And    User presses the search button 
-	And    Soundtracks were not found in the database 
+	And    Soundtrack was not found in the database 
 	Then    User gets the message
 	
 	

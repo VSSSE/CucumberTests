@@ -19,7 +19,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import test.application.*;
 
-public class LookUpSoundtracksStepDefinitions {
+public class LookUpSoundtrackStepDefinitions {
     public static WebDriver driver = null;
 
     @Before
@@ -49,11 +49,11 @@ public class LookUpSoundtracksStepDefinitions {
 
     }
 
-    @And("^Soundtracks were not found in the database$")
+    @And("^Soundtrack was not found in the database$")
     public void not_found(){
         
     }
-    @And("^Soundtracks were found in the database$")
+    @And("^Soundtrack was found in the database$")
     public void found(){
         
     }
