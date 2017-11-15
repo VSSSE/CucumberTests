@@ -1,55 +1,45 @@
 package test.application;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import static org.junit.Assert.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+ 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import test.application.*;
+
+import static org.junit.Assert.*;
 
 public class LookUpSimilarSongsStepDefinition {
-    private static WebDriver driver = null;
+    //private static WebDriver driver = null;
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.gecko.driver", "./geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //System.setProperty("webdriver.gecko.driver", "./geckodriver.exe");
+        //driver = new FirefoxDriver();
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @After
     public void cleanup() {
-        driver.close();
+        //driver.close();
     }
 
-    @Given("^Movie soundtrack was found$")
-    public void movie_soundtrack_was_found(){
-       
-       
-        
+    
+    @Given("^I see the soundtracks list for the movie \"([^\"]*)\"$")
+    public void movie_soundtrack_was_found(String arg1){
+    	fail("Not implemented");
     }
 
-    @When("^User presses the show similar songs button$")
+    @When("^I click on the first soundtrack$")
     public void user_presses_the_show_similar_songs_button() throws Throwable {
+    	fail("Not implemented");
 
     }
 
-    @Then("^User gets a list of similar songs$")
-    public void user_gets_the_list_of_similar_songs(List<String> args1) throws Throwable {
-
+    @Then("^I see a list of similar songs$")
+    public void user_gets_the_list_of_similar_songs() throws Throwable {
+    	fail("Not implemented");
+    	
     }
-
-    @Then("^User gets the message$")
-    public void user_gets_the_message() throws Throwable {
-
-    }
+ 
 
 }
