@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="src/test/Resources/FirstTwo/",//path to the features
+        features="src/test/resources/FirstTwo/",//path to the features
         format = {"json:target/integration_cucumber.json"},//what formatters to use
         tags = {"@run"})
 

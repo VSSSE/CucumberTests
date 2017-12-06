@@ -5,12 +5,16 @@ import static org.junit.Assert.fail;
 
 import java.util.logging.Logger;
 
+import org.openqa.selenium.WebDriver.Navigation;
+
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import main.java.test.NaviagtorFactory;
 
 public class StepDefs {
    // public static WebDriver driver = null;
@@ -19,34 +23,32 @@ public class StepDefs {
 
     @Before
     public void setup() {
-        //System.setProperty("webdriver.gecko.driver", "./geckodriver.exe");
-        //driver = new FirefoxDriver();
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @After
     public void cleanup() {
-        //driver.close();
     }
 
     @Given("^I'm at the start page$")
-    public void user_is_on_start_page() {
+    public void given_i_am_at_the_start_page() {
         // TODO
     	LOGGER.info("Entering: I'm at the start page");
+    	NaviagtorFactory.getNavigator().given_I_navigate_to_the_mock_application();
     }
 
 
     @When("^I enter a movie title \"([^\"]*)\"$")
     public void user_enters_a_movie_title(String arg1) throws Throwable {
-        // TODO
     	LOGGER.info("Entering: I enter a movie title '"
     			+ arg1 + "'");
+		NaviagtorFactory.getNavigator().when_I_try_to_login(arg1);
     }
 
     @And("^I press the search soundtracks button$")
     public void user_presses_the_soundtracks_search_button() throws Throwable {
 
     	LOGGER.info("Entering: I press the search soundtracks button");
+		NaviagtorFactory.getNavigator().then_I_login("");
 
     }
 
