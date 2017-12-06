@@ -8,10 +8,8 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
         features="src/test/resources/FirstTwo/",//path to the features
         format = {"json:target/integration_cucumber.json"},//what formatters to use
-        tags = {"@run"})
+        tags = {"@soundtracks"})
 
-public class CucumberRunner {
-
-
+public class LookUpSoundtracksTest {
 
 }

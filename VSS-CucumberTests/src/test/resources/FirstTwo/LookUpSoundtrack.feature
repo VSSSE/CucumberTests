@@ -1,4 +1,4 @@
-@run
+@soundtracks
 Feature: Look up soundtracks
   As a user
   I want to enter a movie title

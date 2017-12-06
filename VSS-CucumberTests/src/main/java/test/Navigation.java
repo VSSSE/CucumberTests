@@ -37,4 +37,48 @@ public class Navigation {
 			break;
 		}
 	}
+	
+
+	public void given_I_see_the_soundtracks_list_for_the_movie(){
+	}
+
+	public void given_I_see_the_soundtracks_list_for_the_movie(String moviename) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void when_I_click_on_the_first_soundtrack() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void then_I_see_a_list_of_similar_songs() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void given_I_m_at_the_start_page() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void when_I_enter_a_movie_title(String movietitle) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void and_I_press_the_search_soundtracks_button() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void then_I_get_a_list_of_soundtracks() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void then_I_see_the_message(String message) {
+		// TODO Auto-generated method stub
+		
+	}
 }

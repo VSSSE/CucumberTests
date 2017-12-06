@@ -1,4 +1,4 @@
-@run
+@similarsongs
 Feature: Look up similar songs
   As a user
   I want to get a list of similar songs to a given soundtrack

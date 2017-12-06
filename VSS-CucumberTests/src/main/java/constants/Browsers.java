@@ -1,5 +1,7 @@
 package main.java.constants;
 
+
+//Possible Browsers
 public enum Browsers {
 
 	FIREFOX,
