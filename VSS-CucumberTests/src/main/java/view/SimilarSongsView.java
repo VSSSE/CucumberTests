@@ -17,7 +17,7 @@ public class SimilarSongsView {
 	public static void isDisplayed() {
 		// TODO Auto-generated method stub
 		LOGGER.info("Checking soundtracks page is displayed");
-		
+		//Here needs to be a wait routine
 		if(BrowserDriver.getCurrentDriver().getTitle().contains("Search Results for soundtrack"))
 		{
 			LOGGER.info("Soundtracks page is displayed");
