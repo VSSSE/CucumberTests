@@ -28,42 +28,15 @@ public class BrowserFactory {
 	 * e.g to run with safari, pass in the option -Dbrowser=safari at runtime
 	 * @return WebDriver
 	 */
-	public static WebDriver getBrowser() {
-		//Browsers browser;
+	public static WebDriver getBrowser() { 
 		WebDriver driver;
-		
-		/*if(System.getProperty(BROWSER_PROP_KEY)==null){
-			browser = Browsers.FIREFOX;
-		}else{
-			browser = Browsers.browserForName(System.getProperty(BROWSER_PROP_KEY));
-		}*/
-		/*switch(browser){
-			case CHROME:
-				driver = createChromeDriver();
-				break;
-			case SAFARI:
-				driver = createSafariDriver();
-				break;
-			case FIREFOX:
-			default:
-				driver = createFirefoxDriver(getFirefoxProfile());
-				break;
-		}*/
+		 
 		
 		driver = createFirefoxDriver(getFirefoxProfile());
 		addAllBrowserSetup(driver);
 		return driver;
 	}
-
-	/*private static WebDriver createSafariDriver() {
-		return new SafariDriver();
-	}
-
-	private static WebDriver createChromeDriver() {
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		return new ChromeDriver();
-	}*/
-	
+ 
 	private static WebDriver createFirefoxDriver(FirefoxProfile firefoxProfile) {
 		//https://github.com/mozilla/geckodriver/releases
 		System.setProperty("webdriver.gecko.driver", "/home/c0d3d3v/Desktop/other_repos/VSS/VSS-CucumberTests/VSS-CucumberTests/firebug/geckodriver");

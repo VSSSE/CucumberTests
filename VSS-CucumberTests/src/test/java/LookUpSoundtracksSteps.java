@@ -17,14 +17,14 @@ public class LookUpSoundtracksSteps {
     @Given("^I'm at the start page$")
     public void given_I_m_at_the_start_page() {
         // TODO
-    	LOGGER.info("Entering: I'm at the start page");
+    	LOGGER.info("Entering: Given - I'm at the start page");
     	NaviagtorFactory.getNavigator().given_I_m_at_the_start_page();
     }
 
 
     @When("^I enter a movie title \"([^\"]*)\"$")
     public void when_I_enter_a_movie_title(String movietitle) throws Throwable {
-    	LOGGER.info("Entering: I enter a movie title '"
+    	LOGGER.info("Entering: When - I enter a movie title '"
     			+ movietitle + "'");
 		NaviagtorFactory.getNavigator().when_I_enter_a_movie_title(movietitle);
     }
@@ -32,7 +32,7 @@ public class LookUpSoundtracksSteps {
     @And("^I press the search soundtracks button$")
     public void and_I_press_the_search_soundtracks_button() throws Throwable {
 
-    	LOGGER.info("Entering: I press the search soundtracks button");
+    	LOGGER.info("Entering: And - I press the search soundtracks button");
 		NaviagtorFactory.getNavigator().and_I_press_the_search_soundtracks_button();
 
     }
@@ -40,14 +40,14 @@ public class LookUpSoundtracksSteps {
     @Then("^I get a list of soundtracks$")
     public void then_I_get_a_list_of_soundtracks() throws Throwable {
         // TODO
-    	LOGGER.info("Entering: I get a list of soundtracks");
+    	LOGGER.info("Entering: Then - I get a list of soundtracks");
 		NaviagtorFactory.getNavigator().then_I_get_a_list_of_soundtracks();
     }
 
     @Then("^I see the message \"([^\"]*)\"$")
     public void then_I_see_the_message(String message) throws Throwable {
         // TODO
-    	LOGGER.info("Entering: I see the message '" 
+    	LOGGER.info("Entering: Then - I see the message '" 
     			+ message + "'");
 		NaviagtorFactory.getNavigator().then_I_see_the_message(message);
     }

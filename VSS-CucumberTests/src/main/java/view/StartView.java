@@ -12,8 +12,9 @@ public class StartView {
 	private static final Logger LOGGER = Logger.getLogger(StartView.class.getName());
 	
 	private static final StartPageContainer startContainer = PageFactory.initElements(BrowserDriver.getCurrentDriver(), StartPageContainer.class);
-	
-	public static void isDisplayedCheck(){
+
+	public static void isDisplayed() {
+		// TODO Auto-generated method stub
 		LOGGER.info("Checking start page is displayed");
 		
 		if(BrowserDriver.getCurrentDriver().getTitle().contains("Mockup Landing"))
@@ -23,28 +24,25 @@ public class StartView {
 		else {
 			LOGGER.info("Start page is not displayed");
 		}
-		 
-		//BrowserDriver.waitForElement(loginContainer.loginPageDiv);
-		//startContainer.loginPageDiv.isDisplayed();
-	}
-	/*
-	public static void login(String username, String password){
-		LOGGER.info("Logging in with username:" + username + " password:" + password);
-		loginContainer.usernameInput.sendKeys(username);
-		loginContainer.passwordInput.sendKeys(password);
-		loginContainer.submitButton.click();
-		LOGGER.info("Login submitted");
-	}
+	} 
 	
-	public static void checkLoginSuccess(){
-		LOGGER.info("Check login was successful");
-		HomeView.isDisplayedCheck();	
+	public static void enterMovieTitle(String movieTitel) {
+		LOGGER.info("Enter movie title:" + movieTitel + " in form");
+		startContainer.movieTitleInput.sendKeys(movieTitel);
+		
 	}
-	
-	public static void checkLoginErrors(){
-		LOGGER.info("Check login errors displayed");
-		BrowserDriver.waitForElement(loginContainer.getUsernameValidationDiv());
-		BrowserDriver.waitForElement(loginContainer.getPasswordValidationDiv());
+ 
+	public static void submitForm() {
+		startContainer.submitButton.click();
+		LOGGER.info("Search soundtracks submitted");  
 	}
-	*/
+
+	public static void findErrorMessage(String message) {
+		LOGGER.info("Check errormessage exist");
+		BrowserDriver.waitForElement(startContainer.errorMessage);	
+		
+	}
+	 
+
+	 
 }

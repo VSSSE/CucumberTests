@@ -1,80 +1,52 @@
 package main.java.test;
  
+import org.apache.commons.text.similarity.SimilarityScore;
+
 import main.java.utils.BrowserDriver;
+import main.java.view.SimilarSongsView;
+import main.java.view.SoundtracksView;
 import main.java.view.StartView; 
 
 public class Navigation {
 
-	/*
-	private User user;
-	public void given_I_navigate_to_the_mock_application(){
-		BrowserDriver.loadPage("http://localhost/MockApplication/html/MockApplication.html");
-		LoginView.isDisplayedCheck();
-	}
 
-	public void when_I_try_to_login(String credentialsType) {
-		CredentialsType ct = CredentialsType.credentialsTypeForName(credentialsType);
-		switch(ct){
-			case VALID:
-				user = Users.createValidUser();
-			break;
-			case INVALID:
-				user = Users.createInvalidUser();
-			break;
-		}
-		LoginView.login(user.getUsername(), user.getPassword());
-	}
-	
-	public void then_I_login(String outcomeString){
-		Outcome outcome = Outcome.outcomeForName(outcomeString);
-		switch(outcome){
-			case SUCCESS:
-				LoginView.checkLoginSuccess();
-			break;
-			case FAILURE:
-				LoginView.checkLoginErrors();
-			break;
-		}
-	}*/
 	
 
 	public void given_I_see_the_soundtracks_list_for_the_movie(String moviename) {
-		// TODO Auto-generated method stub
-		
+		given_I_m_at_the_start_page();
+		when_I_enter_a_movie_title(moviename);
+		and_I_press_the_search_soundtracks_button();
+		then_I_get_a_list_of_soundtracks();
 	}
 
 	public void when_I_click_on_the_first_soundtrack() {
-		// TODO Auto-generated method stub
-		
+		SoundtracksView.clickFirstListEntry();
 	}
 
 	public void then_I_see_a_list_of_similar_songs() {
-		// TODO Auto-generated method stub
-		
+		SimilarSongsView.isDisplayed();
+		SimilarSongsView.Listexists();
 	}
 
 	public void given_I_m_at_the_start_page() {
 		BrowserDriver.loadPage("https://it18-webeng1.dhbw-stuttgart.de/");
-		StartView.isDisplayedCheck();
+		StartView.isDisplayed();
 	}
 
 	public void when_I_enter_a_movie_title(String movietitle) {
-		// TODO Auto-generated method stub
-		
+		StartView.enterMovieTitle(movietitle); 
 	}
 
 	public void and_I_press_the_search_soundtracks_button() {
-		// TODO Auto-generated method stub
-		
+		StartView.submitForm(); 
 	}
 
-	public void then_I_get_a_list_of_soundtracks() {
-		// TODO Auto-generated method stub
-		
+	public void then_I_get_a_list_of_soundtracks() { 
+		SoundtracksView.isDisplayed();
+		SoundtracksView.Listexists();
 	}
 
 	public void then_I_see_the_message(String message) {
-		// TODO Auto-generated method stub
-		
+		StartView.findErrorMessage(message); 
 	}
 }

@@ -12,7 +12,7 @@ Feature: Look up similar songs
 
     Examples:
       | title         |
-      | Jurassic Park |
+      | Scott Pilgrim VS. the World |
 
 
   Scenario Outline: No similar songs found

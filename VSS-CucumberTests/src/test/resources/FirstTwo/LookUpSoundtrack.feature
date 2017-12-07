@@ -13,8 +13,7 @@ Feature: Look up soundtracks
 
     Examples:
       | title          |
-      | 22 Jump Street |
-      | Jurassic Park  |
+      | Scott Pilgrim VS. the World |
 
 
   Scenario Outline: No soundtracks were found
@@ -25,7 +24,6 @@ Feature: Look up soundtracks
 
     Examples:
       | title                   | message                                   |
-      |                         | No title entered                          |
-      | #+ThisMovie do notExist | No soundtracks where found for this movie |
+      | A movie that does not exist | No soundtracks where found for this movie |
 		
 		
