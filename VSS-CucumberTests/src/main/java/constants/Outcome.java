@@ -1,7 +1,7 @@
 package main.java.constants;
 
 public enum Outcome {
-
+/*
 	SUCCESS(new String[]{"success", "successfully"}),
 	FAILURE(new String[]{"failure", "unsuccessfully"});
 	
@@ -24,5 +24,5 @@ public enum Outcome {
 
     private static IllegalArgumentException outcomeNotFound(String outcome) {
         return new IllegalArgumentException(("Invalid outcome [" + outcome + "]"));
-    }
+    }*/
 }

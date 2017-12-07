@@ -1,13 +1,12 @@
 package main.java.test;
-
-import main.java.constants.CredentialsType;
-import main.java.constants.Outcome;
+ 
 import main.java.utils.BrowserDriver;
-import main.java.view.LoginView;
+import main.java.view.StartView; 
 
 public class Navigation {
-	private User user;
 
+	/*
+	private User user;
 	public void given_I_navigate_to_the_mock_application(){
 		BrowserDriver.loadPage("http://localhost/MockApplication/html/MockApplication.html");
 		LoginView.isDisplayedCheck();
@@ -36,11 +35,8 @@ public class Navigation {
 				LoginView.checkLoginErrors();
 			break;
 		}
-	}
+	}*/
 	
-
-	public void given_I_see_the_soundtracks_list_for_the_movie(){
-	}
 
 	public void given_I_see_the_soundtracks_list_for_the_movie(String moviename) {
 		// TODO Auto-generated method stub
@@ -58,8 +54,8 @@ public class Navigation {
 	}
 
 	public void given_I_m_at_the_start_page() {
-		// TODO Auto-generated method stub
-		
+		BrowserDriver.loadPage("https://it18-webeng1.dhbw-stuttgart.de/");
+		StartView.isDisplayedCheck();
 	}
 
 	public void when_I_enter_a_movie_title(String movietitle) {

@@ -8,12 +8,15 @@ import org.openqa.selenium.support.How;
 import main.java.utils.BrowserDriver;
 
 
-public class LoginPageContainer {
+public class StartPageContainer {
+	
+
+	/*
 	private String validationContainerCSS = "div.dijitValidationContainer";
 
 	@FindBy(how = How.ID, using = "LoginPage")
     public WebElement loginPageDiv;
-	
+    
 	@FindBy(how = How.CSS, using = "#LoginPage input[name=username]")
     public WebElement usernameInput;
 	
@@ -21,6 +24,7 @@ public class LoginPageContainer {
 		WebElement parent = BrowserDriver.getParent(BrowserDriver.getParent(usernameInput));
 		return parent.findElement(By.cssSelector(validationContainerCSS));
 	}
+	
 	
 	@FindBy(how = How.CSS, using = "#LoginPage input[name=password]")
     public WebElement passwordInput;
@@ -35,4 +39,6 @@ public class LoginPageContainer {
 //    public WebElement submitButton;
 	@FindBy(how = How.CSS, using = "#LoginPage span[role='button']")
     public WebElement submitButton;
+    
+    */
 }
