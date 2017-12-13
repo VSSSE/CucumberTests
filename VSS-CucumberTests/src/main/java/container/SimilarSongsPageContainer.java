@@ -10,7 +10,7 @@ public class SimilarSongsPageContainer {
 	
 
 	//Todo: set in mockup "name = movieTitle"
-	@FindBy(how = How.CSS, using = ".results-list")
+	@FindBy(how = How.CSS, using = ".similars-list")
     public WebElement resultList;
  
 }

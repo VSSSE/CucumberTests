@@ -2,6 +2,7 @@ package main.java.view;
 
 import java.util.logging.Logger;
 
+import main.java.container.SimilarSongsPageContainer;
 import org.openqa.selenium.support.PageFactory;
 
 import main.java.container.SoundtracksPageContainer;
@@ -12,7 +13,7 @@ import main.java.utils.BrowserDriver;
 public class SimilarSongsView {
 	private static final Logger LOGGER = Logger.getLogger(SimilarSongsView.class.getName());
 	
-	private static final SoundtracksPageContainer soundtracksContainer = PageFactory.initElements(BrowserDriver.getCurrentDriver(), SoundtracksPageContainer.class);
+	private static final SimilarSongsPageContainer similarSongsContainer = PageFactory.initElements(BrowserDriver.getCurrentDriver(), SimilarSongsPageContainer.class);
 
 	public static void isDisplayed() {
 		// TODO Auto-generated method stub
@@ -20,16 +21,16 @@ public class SimilarSongsView {
 		//Here needs to be a wait routine
 		if(BrowserDriver.getCurrentDriver().getTitle().contains("Search Results for soundtrack"))
 		{
-			LOGGER.info("Soundtracks page is displayed");
+			LOGGER.info("Similar songs page is displayed");
 		}
 		else {
-			LOGGER.info("Soundtracks page is not displayed");
+			LOGGER.info("Similar songs page is not displayed");
 		}
 	}
 
 	public static void Listexists() {
 		LOGGER.info("Check soundtrackslist exist");
-		BrowserDriver.waitForElement(soundtracksContainer.resultList);	
+		BrowserDriver.waitForElement(similarSongsContainer.resultList);
 	} 
 	
 	
